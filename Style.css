@@ -1,118 +1,140 @@
+/* VS Code Theme */
+body {
+    font-family: 'Fira Code', monospace;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1.875em 1fr 1.375em;
+    grid-template-columns: 3.125em 15.625em 1fr;
+    background: #1e1e1e;
+    color: #d4d4d4;
+}
+
+.title-bar {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    background: #323233;
+    color: white;
+    padding: 0.3125em 0.625em;
+    font-size: 0.875em;
+    display: flex;
+    align-items: center;
+}
+
+.activity-bar {
+    grid-row: 2;
+    grid-column: 1;
+    background: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.625em;
+}
+
+.activity-icon {
+    background: none;
+    border: none;
+    color: #cccccc;
+    font-size: 1.25em;
+    padding: 0.625em;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.activity-icon:hover {
+    color: white;
+}
+
+.activity-icon.active {
+    color: white;
+}
+
+.sidebar {
+    grid-row: 2;
+    grid-column: 2;
+    background: #252526;
+    color: white;
+    padding: 0.625em;
+    overflow-y: auto;
+}
+
+.file-tree {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.file-tree li {
+    margin: 0.125em 0;
+}
+
+.file-tree a {
+    color: #cccccc;
+    text-decoration: none;
+    display: block;
+    padding: 0.125em 0.3125em;
+    border-radius: 3px;
+    transition: background 0.2s;
+}
+
+.file-tree a:hover {
+    background: #37373d;
+}
+
+.file-tree ul {
+    margin-left: 1.25em;
+    list-style: none;
+    padding: 0;
+}
+
+.main-content {
+    grid-row: 2;
+    grid-column: 3;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor {
+    flex: 1;
+    padding: 1.25em;
+    overflow: auto;
+    font-size: 0.875em;
+    line-height: 1.5;
+}
+
+pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+/* Syntax Highlighting */
+.comment { color: #6a9955; }
+.keyword { color: #569cd6; }
+.string { color: #ce9178; }
+.function { color: #dcdcaa; }
+
+.status-bar {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    background: #007acc;
+    color: white;
+    padding: 0.125em 0.625em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75em;
+    align-items: center;
+}
+
 /* Mobile */
-@media only screen and (max-width: 50em) {
+@media (max-width: 768px) {
     body {
-        display: grid;
-        grid-template-columns: 100%;
-        padding: 5em;
-        grid-template-rows: 25%;
-        grid-template-areas:
-            "header"
-            "nav"
-            "main"
-            "footer footer footer"
-        ;
+        grid-template-columns: 3.125em 0 1fr;
     }
-
-        .showNav {
-            height: 0.8em;
-            width: 1.25em;
-            display: block;
-            border-top: 0.2em solid #000000;
-            border-bottom: 0.2em solid #000000;
-            border-radius: 0.2em;
-        }
-
-        .showNav::before {
-            content: '';
-            position: absolute;
-            width: 1.25em;
-            margin-top: 0.3em;
-            border-top: 0.2em solid #000000;
-        }
-
-    }
-
-    nav {
-        display: none;
-        background-color: rgb(255, 255, 255);
-        position: fixed;
-        top: 0;
-        left: 50%;
-        width: 50%;
-        height: 100vh;
-    }
-
-    #clicked:target nav {
-        display: block;
-    }
-
-    #clicked .on {
-        display: block;
-    }
-
-    #clicked .off {
+    .sidebar {
         display: none;
     }
-
-    #clicked:target .on {
-        display: none;
-    }
-
-    #clicked:target .off {
-        display: block;
-    }
-
-
-/* Desktop */
-@media only screen and (min-width: 50em) {
-    body {
-        display: grid;
-        grid-template-columns: 100%;
-        padding: 10em;
-        grid-template-rows: 25%;
-        grid-template-areas:
-            "header header header"
-            "nav nav nav"
-            "main"
-            "footer footer footer"
-        ;
-    }
-.showNav {
-    display: none;
-}
-
-    .on {
-        display: none;
-    }
-
-    .off {
-        display: none;
-    }
-
-    /* make desktop nav horizontal */
-    nav {
-        display: block;
-        position: static;
-        width: 100%;
-        height: auto;
-        background-color: transparent;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav ul li {
-        margin: 0 1em;
-    }
-}
-
-/* hide hamburger when menu open */
-#clicked:target .showNav {
-    display: none;
 }
 

@@ -4,36 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashwyn's Website</title>
+    <title>Ashwyn's Portfolio - Report</title>
     <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<header>
-    <a class="showNav" href="#clicked"></a>
-    <h1>Project Report</h1>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="project.html">Project</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="report.html">Report</a></li>
-        <li><a href="videoDemo.html">Video Demo</a></li>
-
-    </ul>
-</nav>
-
 <body>
+    <div class="title-bar">
+        <span>Ashwyn Philip - Portfolio</span>
+    </div>
+   
+    <nav class="sidebar">
+        <ul class="file-tree">
+            <li><a href="index.html">📄 about.html</a></li>
+            <li class="folder">
+                <a href="project.html">📁 projects/</a>
+                <ul>
+                    <li><a href="#project1">📄 project1.py</a></li>
+                    <li><a href="#project2">📄 project2.py</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">📄 contact.html</a></li>
+            <li><a href="report.html">📄 report.html</a></li>
+            <li><a href="videoDemo.html">📄 video.html</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <div class="editor">
+            <pre>
+<span class="comment"># Report</span>
 
-    <main>
-        <h1>main</h1>
+<span class="string">Report content here.</span>
+            </pre>
+        </div>
     </main>
-
+    <div class="status-bar">
+        <span>UTF-8</span>
+        <span>HTML</span>
+        <span>git: main</span>
+        <span>Ashwyn Philip</span>
+    </div>
 </body>
-
-<footer>
-    <p>&copy; 2026 Ashwyn Philip. All rights reserved.</p>
-</footer>
 
 </html>
