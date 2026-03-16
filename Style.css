@@ -1,4 +1,13 @@
 /* VS Code Theme */
+/*Advanced CSS */
+:root {
+    --text-font-size: 1.7em;
+}
+body > main > div > pre > span:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 body {
     font-family: 'Fira Code', monospace;
     margin: 0;
@@ -111,10 +120,21 @@ pre {
 }
 
 /* Syntax Highlighting */
-.comment { color: #6a9955; }
-.keyword { color: #569cd6; }
-.string { color: #ce9178; }
-.function { color: #dcdcaa; }
+.comment {
+    color: #6a9955;
+}
+
+.keyword {
+    color: #569cd6;
+}
+
+.string {
+    color: #ce9178;
+}
+
+.function {
+    color: #dcdcaa;
+}
 
 .status-bar {
     grid-row: 3;
@@ -128,13 +148,51 @@ pre {
     align-items: center;
 }
 
+.role {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 0.5px #ce9178;
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+.role ::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: 2px solid #ce9178;
+    color: #ce9178;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+    10%,
+    100% {
+        width: 0;
+    }
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+@keyframes display-text {
+    25%,
+    100% {
+        display: none;
+    }
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     body {
         grid-template-columns: 3.125em 0 1fr;
     }
+
     .sidebar {
         display: none;
     }
 }
-
