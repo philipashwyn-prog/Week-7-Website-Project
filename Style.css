@@ -198,6 +198,81 @@ pre a:hover {
     }
 }
 
+/* Form Styling */
+pre form {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+}
+
+pre form label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #569cd6;
+    font-weight: 500;
+}
+
+pre form input[type="text"],
+pre form input[type="email"],
+pre form textarea {
+    background: #2d2d30;
+    color: #d4d4d4;
+    border: 1px solid #3e3e42;
+    padding: 0.75em;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+pre form input[type="text"]:focus,
+pre form input[type="email"]:focus,
+pre form textarea:focus {
+    outline: none;
+    border-color: #007acc;
+    background: #252526;
+    box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.15);
+}
+
+pre form input::placeholder,
+pre form textarea::placeholder {
+    color: #6a6a6a;
+}
+
+pre form textarea {
+    resize: vertical;
+    min-height: 8em;
+    line-height: 1.5;
+}
+
+pre form button {
+    background: #007acc;
+    color: #ffffff;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    align-self: flex-start;
+    margin-top: 0.5em;
+}
+
+pre form button:hover {
+    background: #005a9c;
+    box-shadow: 0 2px 8px rgba(0, 122, 204, 0.3);
+}
+
+pre form button:active {
+    background: #004578;
+    transform: translateY(1px);
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     body {

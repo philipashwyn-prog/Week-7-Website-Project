@@ -34,8 +34,22 @@
             <pre>
 <span class="comment"># Contact</span>
 
+<span class="keyword">Contact me here:</span>
 
-<span class="keyword">Email:</span> <span class="string">"Philipashwyn@gmail.com"</span>
+<form action="mailto:philipashwyn@gmail.com" method="post" enctype="text/plain">
+    <label class = "keyword" for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Full Name Here">
+
+    <label class = "keyword" for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Email Here">
+
+    <label class = "keyword" for="message">Message:</label>
+    <textarea id="message" name="message" placeholder="Your message here..."></textarea>
+
+    <button class="button.btn.animation" type="submit">Send</button>
+    
+</form>
+
             </pre>
         </div>
     </main>
