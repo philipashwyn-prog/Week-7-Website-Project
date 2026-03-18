@@ -377,6 +377,40 @@ pre a:hover {
     margin-bottom: 0;
 }
 
+.word-document img {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.word-document p + img {
+    margin-top: 0.5rem;
+}
+
+.word-document img + p {
+    margin-top: 1.5rem;
+}
+
+/* Image captions (p tags directly before img) */
+.word-document img ~ p:empty,
+.word-document p:has(+ img) {
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-indent: 0;
+}
+
+.image-caption {
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-indent: 0 !important;
+    margin-bottom: 0.75rem !important;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     body {
@@ -394,5 +428,10 @@ pre a:hover {
     .word-document {
         padding: 1.5rem 1.25rem;
         min-height: auto;
+    }
+
+    .word-document img {
+        width: 100%;
+        margin: 1rem auto;
     }
 }
