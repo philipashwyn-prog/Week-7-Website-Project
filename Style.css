@@ -199,23 +199,23 @@ pre a:hover {
 }
 
 /* Form Styling */
-pre form {
+.editor form {
     margin-top: 1em;
     display: flex;
     flex-direction: column;
     gap: 1.25em;
 }
 
-pre form label {
+.editor form label {
     display: block;
     margin-bottom: 0.5em;
     color: #569cd6;
     font-weight: 500;
 }
 
-pre form input[type="text"],
-pre form input[type="email"],
-pre form textarea {
+.editor form input[type="text"],
+.editor form input[type="email"],
+.editor form textarea {
     background: #2d2d30;
     color: #d4d4d4;
     border: 1px solid #3e3e42;
@@ -228,27 +228,27 @@ pre form textarea {
     box-sizing: border-box;
 }
 
-pre form input[type="text"]:focus,
-pre form input[type="email"]:focus,
-pre form textarea:focus {
+.editor form input[type="text"]:focus,
+.editor form input[type="email"]:focus,
+.editor form textarea:focus {
     outline: none;
     border-color: #007acc;
     background: #252526;
     box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.15);
 }
 
-pre form input::placeholder,
-pre form textarea::placeholder {
+.editor form input::placeholder,
+.editor form textarea::placeholder {
     color: #6a6a6a;
 }
 
-pre form textarea {
+.editor form textarea {
     resize: vertical;
     min-height: 8em;
     line-height: 1.5;
 }
 
-pre form button {
+.editor form button {
     background: #007acc;
     color: #ffffff;
     border: none;
@@ -263,12 +263,12 @@ pre form button {
     margin-top: 0.5em;
 }
 
-pre form button:hover {
+.editor form button:hover {
     background: #005a9c;
     box-shadow: 0 2px 8px rgba(0, 122, 204, 0.3);
 }
 
-pre form button:active {
+.editor form button:active {
     background: #004578;
     transform: translateY(1px);
 }

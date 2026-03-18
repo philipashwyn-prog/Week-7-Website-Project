@@ -35,8 +35,9 @@
 <span class="comment"># Contact</span>
 
 <span class="keyword">Contact me here:</span>
+
             </pre>
-            <form action="mailto:philipashwyn@gmail.com" method="post" enctype="text/plain">
+            <form id="contactForm" action="mailto:philipashwyn@gmail.com" method="get" enctype="text/plain" onsubmit="setTimeout(function() { document.getElementById('contactForm').reset(); }, 100);">
                 <label class="keyword" for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Full Name Here">
 
@@ -46,7 +47,7 @@
                 <label class="keyword" for="message">Message:</label>
                 <textarea id="message" name="message" placeholder="Your message here..."></textarea>
 
-                <button class="button.btn.animation" type="submit">Send</button>
+                <button class="button btn animation" type="submit">Send</button>
             </form>
         </div>
     </main>
