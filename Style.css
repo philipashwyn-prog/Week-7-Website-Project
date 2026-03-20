@@ -3,13 +3,15 @@
 :root {
     --text-font-size: 1.7em;
 }
-body > main > div > pre > span:nth-child(1) {
-  font-size: 2rem;
-  font-weight: 700;
+
+body>main>div>pre>span:nth-child(1) {
+    font-size: 2rem;
+    font-weight: 700;
 }
-body > main > span {
-   font-size: 2rem;
-  font-weight: 700;
+
+body>main>span {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 body {
@@ -185,10 +187,12 @@ pre a:hover {
 }
 
 @keyframes fill-text {
+
     10%,
     100% {
         width: 0;
     }
+
     70%,
     90% {
         width: 100%;
@@ -196,6 +200,7 @@ pre a:hover {
 }
 
 @keyframes display-text {
+
     25%,
     100% {
         display: none;
@@ -388,16 +393,16 @@ pre a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.word-document p + img {
+.word-document p+img {
     margin-top: 0.5rem;
 }
 
-.word-document img + p {
+.word-document img+p {
     margin-top: 1.5rem;
 }
 
 /* Image captions (p tags directly before img) */
-.word-document img ~ p:empty,
+.word-document img~p:empty,
 .word-document p:has(+ img) {
     font-weight: 600;
     font-size: 0.95rem;
